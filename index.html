@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GSC Business Manager</title>
+<meta name="theme-color" content="#29235C">
+<link rel="icon" href="data:image/png;base64,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">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--brand:#29235C;--bg:#F4F3FA;--ink:#1B1740;--mut:#5F5C85;--pri:#29235C;--on:#fff;--acc:#E6007E;--bad:#B3261E;--line:#DAD8EC;--card:#fff}
+@media(prefers-color-scheme:dark){:root{--bg:#14122B;--ink:#ECEAFB;--mut:#A9A5D0;--pri:#A39CF2;--on:#14122B;--acc:#FF4DA6;--bad:#FF8A80;--line:#34306A;--card:#1D1A40}}
+*{box-sizing:border-box}
+body{margin:0;font:15px/1.5 'Hanken Grotesk',system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer;border:1px solid var(--line);background:var(--card);border-radius:6px;padding:6px 12px}
+button:hover{border-color:var(--pri)}
+button.pri{background:var(--pri);color:var(--on);border-color:var(--pri);font-weight:600}
+:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+input,select{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--card)}
+label{display:block;font-size:13px;color:var(--mut);margin-bottom:10px}
+label input,label select{margin-top:3px;color:var(--ink);font-size:15px}
+header{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px;padding:8px 20px;background:var(--brand);color:#fff}
+.logo{height:44px;display:block}header .co{color:#CFCBF0}header nav button{color:#fff}header nav button:hover{border-color:transparent;background:#ffffff1f}header #out{background:none;color:#fff;border-color:#ffffff66}
+.hero{background:var(--brand);border-radius:12px;padding:24px;display:flex;justify-content:center;margin-bottom:20px}.hero img{width:240px;max-width:100%;display:block}
+nav{display:flex;gap:2px;overflow-x:auto;flex:1}
+nav button{border:0;background:none;border-bottom:3px solid transparent;border-radius:0;padding:8px 10px;white-space:nowrap}
+nav button.on{border-bottom-color:var(--acc);font-weight:600}
+main{max-width:1050px;margin:0 auto;padding:20px}
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
+.bar h2{margin:0;flex:1;font-size:22px}.bar input,.bar select{width:auto;min-width:180px}
+.warn{background:var(--acc);color:#fff;padding:8px 20px;font-weight:600}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-bottom:16px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.kpi span{display:block;font-size:13px;color:var(--mut)}.kpi b{font-size:21px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:16px}
+.panel h3{margin:0 0 10px;font-size:16px}
+.bars{display:flex;align-items:flex-end;gap:4px;height:130px}
+.bars i{flex:1;background:var(--pri);border-radius:3px 3px 0 0;min-width:4px}
+.tw{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:16px}
+table{width:100%;border-collapse:collapse}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-size:13px;color:var(--mut);font-weight:600}
+tr.low td:nth-child(5){color:var(--bad);font-weight:700}tr.off{opacity:.5}
+.act{text-align:right}.act button,.act a{margin-left:6px;font-size:13px}
+.empty{color:var(--mut);padding:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0 14px}
+.line{display:grid;grid-template-columns:1fr 90px 36px;gap:8px;margin-bottom:8px}
+.tot{margin:12px 0;font-size:18px}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.plans .panel{margin:0}.plans .on{border:2px solid var(--pri)}
+.auth{max-width:380px;margin:8vh auto;padding:0 20px}
+.auth h1{margin:0 0 4px}.auth form button{width:100%;margin-top:8px;padding:10px}
+.row{display:flex;gap:8px;justify-content:flex-end;margin-top:8px}
+dialog{border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);width:min(440px,92vw)}
+dialog::backdrop{background:#0008}
+#toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:8px;opacity:0;pointer-events:none;transition:opacity .2s;max-width:90vw}
+#toast.show{opacity:1}#toast.err{background:var(--bad);color:#fff}
+@media(prefers-reduced-motion:reduce){#toast{transition:none}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<dialog id="dlg"></dialog>
+<div id="toast" role="status"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script>
+// ====== CONFIGURATION : collez ici les valeurs de Supabase > Project Settings > API ======
+const SUPABASE_URL = 'https://VOTRE-PROJET.supabase.co';
+const SUPABASE_ANON_KEY = 'VOTRE_CLE_ANON_PUBLIQUE'; // clé « anon » uniquement, jamais la clé service_role
+// =======================================================================================
+const LOGO = 'data:image/png;base64,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';
+const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const $ = (s, r = document) => r.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const num = n => new Intl.NumberFormat('fr-FR').format(n || 0);
+const fmt = n => num(n) + ' FCFA';
+const iso = d => d.toISOString().slice(0, 10);
+const dt = v => new Date(v).toLocaleDateString('fr-FR');
+const toast = (m, err) => { const t = $('#toast'); t.textContent = m; t.className = 'show' + (err ? ' err' : ''); setTimeout(() => t.className = '', 3500); };
+let me = null, sub = null, plans = [], view = 'dash', cache = {}, lineHtml = () => '';
+const expired = () => !!(sub && sub.ends_at && new Date(sub.ends_at).getTime() + 7 * 864e5 < Date.now());
+const canWrite = () => !!me && ['owner', 'manager', 'seller'].includes(me.role) && !expired();
+const call = async (fn, args) => { const { data, error } = await sb.rpc(fn, args); if (error) { toast(error.message, 1); throw error; } return data; };
+
+// ---------- Démarrage ----------
+async function boot() {
+  const { data: { session } } = await sb.auth.getSession();
+  if (!session) return authView();
+  const { data: p } = await sb.from('profiles').select('*,tenants(name)').eq('id', session.user.id).maybeSingle();
+  if (!p) return setupView();
+  me = p;
+  sub = (await sb.from('subscriptions').select('*').eq('tenant_id', p.tenant_id).maybeSingle()).data;
+  plans = (await sb.from('plans').select('*').order('price_month')).data || [];
+  shell();
+}
+function authView() {
+  $('#app').innerHTML = `<main class="auth"><div class="hero"><img src="${LOGO}" alt="GSC Business Center"></div><h1>Business Manager</h1><p>Toute votre entreprise sous contrôle, depuis une seule plateforme.</p>
+  <form id="f"><label>E-mail<input name="email" type="email" required autocomplete="email"></label>
+  <label>Mot de passe (8 caractères minimum)<input name="pw" type="password" minlength="8" required autocomplete="current-password"></label>
+  <button class="pri">Se connecter</button><button type="button" id="su">Créer un compte</button></form></main>`;
+  $('#f').onsubmit = async e => { e.preventDefault(); const f = new FormData(e.target);
+    const { error } = await sb.auth.signInWithPassword({ email: f.get('email'), password: f.get('pw') });
+    error ? toast('E-mail ou mot de passe incorrect', 1) : boot(); };
+  $('#su').onclick = async () => { const f = $('#f'); if (!f.reportValidity()) return; const d = new FormData(f);
+    const { data, error } = await sb.auth.signUp({ email: d.get('email'), password: d.get('pw') });
+    if (error) return toast(error.message, 1);
+    data.session ? boot() : toast('Compte créé. Confirmez votre e-mail, puis connectez-vous.'); };
+}
+function setupView() {
+  $('#app').innerHTML = `<main class="auth"><div class="hero"><img src="${LOGO}" alt="GSC Business Center"></div><h1>Créez votre entreprise</h1><p>Dernière étape avant d’accéder à votre espace.</p>
+  <form id="f"><label>Nom de l’entreprise<input name="n" required minlength="2"></label>
+  <label>Secteur d’activité<input name="s" placeholder="Commerce, services, restauration…"></label>
+  <label>Téléphone<input name="p" type="tel"></label><label>Votre nom complet<input name="u" required></label>
+  <button class="pri">Créer mon espace</button></form></main>`;
+  $('#f').onsubmit = async e => { e.preventDefault(); const f = new FormData(e.target);
+    try { await call('create_tenant', { p_name: f.get('n'), p_sector: f.get('s'), p_phone: f.get('p'), p_full_name: f.get('u') }); boot(); } catch {} };
+}
+function shell() {
+  const items = [['dash', 'Tableau de bord'], ['sales', 'Ventes'], ['customers', 'Clients'], ['products', 'Produits'], ['expenses', 'Dépenses'], ['plan', 'Abonnement'], ...(me.is_super_admin ? [['admin', 'Administration GSC']] : [])];
+  $('#app').innerHTML = `<header><img class="logo" src="${LOGO}" alt="GSC Business Center"><span class="co">${esc(me.tenants?.name)}</span>
+  <nav>${items.map(([v, l]) => `<button data-v="${v}">${l}</button>`).join('')}</nav><button id="out">Se déconnecter</button></header>
+  ${expired() ? '<div class="warn">Abonnement expiré : lecture seule. Vos données sont conservées. Renouvelez dans l’onglet Abonnement.</div>' : ''}
+  ${me.role === 'viewer' ? '<div class="warn">Accès en lecture seule.</div>' : ''}<main id="main"></main>`;
+  const mark = () => document.querySelectorAll('nav button').forEach(b => b.classList.toggle('on', b.dataset.v === view));
+  $('nav').onclick = e => { const b = e.target.closest('button'); if (b) { view = b.dataset.v; mark(); render(); } };
+  $('#out').onclick = async () => { await sb.auth.signOut(); me = null; authView(); };
+  $('#main').onclick = act; $('#main').oninput = e => { if (e.target.closest('#ln')) calc(); };
+  mark(); render();
+}
+function render() {
+  const v = { dash, sales, customers: () => list('customers'), products: () => list('products'), expenses: () => list('expenses'), plan, admin }[view];
+  v().catch(() => {});
+}
+
+// ---------- Tableau de bord ----------
+function range(k) { const t = new Date(), f = new Date(); if (k === '7') f.setDate(t.getDate() - 6); if (k === 'month') f.setDate(1); if (k === 'year') { f.setMonth(0); f.setDate(1); } return [iso(f), iso(t)]; }
+async function dash(k = 'month') {
+  const [f, t] = range(k); const d = await call('dashboard', { p_from: f, p_to: t }); const mx = Math.max(1, ...d.daily.map(x => x.v));
+  $('#main').innerHTML = `<div class="bar"><h2>Tableau de bord</h2><select id="rg">${[['today', 'Aujourd’hui'], ['7', '7 derniers jours'], ['month', 'Ce mois'], ['year', 'Cette année']].map(([v, l]) => `<option value="${v}"${v === k ? ' selected' : ''}>${l}</option>`).join('')}</select></div>
+  <div class="kpis">${[['Chiffre d’affaires', fmt(d.revenue)], ['Ventes', d.count], ['Dépenses', fmt(d.expenses)], ['Bénéfice estimé', fmt(d.profit)], ['À encaisser auprès des clients', fmt(d.receivables)]].map(([l, v]) => `<div class="kpi"><span>${l}</span><b>${v}</b></div>`).join('')}</div>
+  <section class="panel"><h3>Ventes par jour</h3>${d.daily.length ? `<div class="bars">${d.daily.map(x => `<i title="${dt(x.d)} : ${fmt(x.v)}" style="height:${Math.max(4, x.v / mx * 100)}%"></i>`).join('')}</div>` : '<p class="empty">Aucune vente sur cette période.</p>'}</section>
+  <section class="panel"><h3>Stock bas</h3>${d.low.length ? `<ul>${d.low.map(p => `<li>${esc(p.name)} : <b>${p.stock}</b> en stock</li>`).join('')}</ul>` : '<p class="empty">Aucun produit sous son seuil d’alerte.</p>'}</section>`;
+  $('#rg').onchange = e => dash(e.target.value);
+}
+
+// ---------- Clients, produits, dépenses ----------
+const ent = {
+  customers: { s: 'client', t: 'Clients', req: ['name'], order: 'name', cols: [['name', 'Nom'], ['phone', 'Téléphone'], ['email', 'E-mail'], ['address', 'Adresse']] },
+  products: { s: 'produit', t: 'Produits', req: ['name', 'price'], order: 'name', cols: [['name', 'Nom'], ['sku', 'Référence'], ['price', 'Prix de vente', 'm'], ['cost', "Prix d'achat", 'm'], ['stock', 'Stock', 'n'], ['alert_threshold', 'Seuil d’alerte', 'n']] },
+  expenses: { s: 'dépense', t: 'Dépenses', req: ['spent_on', 'category', 'amount'], order: 'spent_on', cols: [['spent_on', 'Date', 'd'], ['category', 'Catégorie'], ['amount', 'Montant', 'm'], ['payee', 'Bénéficiaire'], ['method', 'Moyen de paiement']] }
+};
+const cell = (v, t) => t === 'm' ? fmt(v) : t === 'n' ? num(v) : t === 'd' ? dt(v) : esc(v);
+async function list(k) {
+  const c = ent[k];
+  const { data, error } = await sb.from(k).select('*').is('deleted_at', null).order(c.order, { ascending: c.order === 'name' }).limit(500);
+  if (error) return toast(error.message, 1);
+  cache[k] = data;
+  $('#main').innerHTML = `<div class="bar"><h2>${c.t}</h2><input id="q" type="search" placeholder="Rechercher">${canWrite() ? `<button class="pri" data-a="add" data-k="${k}">Ajouter un ${c.s}</button>` : ''}</div>
+  <div class="tw"><table><thead><tr>${c.cols.map(x => `<th>${x[1]}</th>`).join('')}<th></th></tr></thead><tbody id="tb"></tbody></table></div>`;
+  const draw = () => { const q = $('#q').value.toLowerCase(); const rows = data.filter(r => !q || JSON.stringify(r).toLowerCase().includes(q));
+    $('#tb').innerHTML = rows.length ? rows.map(r => `<tr${k === 'products' && r.stock <= r.alert_threshold ? ' class="low"' : ''}>${c.cols.map(([f, , t]) => `<td>${cell(r[f], t)}</td>`).join('')}<td class="act">${canWrite() ? `<button data-a="edit" data-k="${k}" data-id="${r.id}">Modifier</button><button data-a="del" data-k="${k}" data-id="${r.id}">Supprimer</button>` : ''}</td></tr>`).join('')
+      : `<tr><td colspan="9" class="empty">Aucun enregistrement.${canWrite() ? ' Cliquez sur « Ajouter » pour commencer.' : ''}</td></tr>`; };
+  $('#q').oninput = draw; draw();
+}
+function form(k, row = {}) {
+  const c = ent[k], d = $('#dlg');
+  d.innerHTML = `<form id="ef"><h2>${row.id ? 'Modifier' : 'Ajouter'} : ${c.s}</h2>${c.cols.map(([f, l, t]) => {
+    const isN = t === 'm' || t === 'n';
+    const v = row[f] ?? (t === 'd' ? iso(new Date()) : isN ? (f === 'alert_threshold' ? 5 : 0) : '');
+    return `<label>${l}<input name="${f}" type="${t === 'd' ? 'date' : isN ? 'number' : 'text'}" ${isN ? 'min="0" step="1"' : ''} value="${esc(v)}" ${c.req.includes(f) ? 'required' : ''}></label>`; }).join('')}
+  <div class="row"><button type="button" id="cx">Annuler</button><button class="pri">Enregistrer</button></div></form>`;
+  d.showModal(); $('#cx').onclick = () => d.close();
+  $('#ef').onsubmit = async e => { e.preventDefault(); const o = {};
+    new FormData(e.target).forEach((v, f) => { const t = c.cols.find(x => x[0] === f)[2]; o[f] = (t === 'm' || t === 'n') ? +v : (v === '' ? null : v); });
+    const extra = { tenant_id: me.tenant_id, ...(k === 'expenses' ? { user_id: me.id } : {}) };
+    const r = row.id ? await sb.from(k).update(o).eq('id', row.id) : await sb.from(k).insert({ ...o, ...extra });
+    r.error ? toast(r.error.message, 1) : (d.close(), toast('Enregistré'), render()); };
+}
+
+// ---------- Ventes ----------
+function calc() {
+  let t = 0; document.querySelectorAll('#ln .line').forEach(l => { const s = l.querySelector('select'); const p = +(s.selectedOptions[0]?.dataset.p || 0); t += p * (+l.querySelector('input').value || 0); });
+  $('#tt').textContent = fmt(t); $('#pd').value = t;
+}
+async function sales() {
+  const [a, b, c] = await Promise.all([
+    sb.from('customers').select('id,name').is('deleted_at', null).order('name'),
+    sb.from('products').select('id,name,price,stock').is('deleted_at', null).eq('active', true).order('name'),
+    sb.from('sales').select('*,customers(name)').order('created_at', { ascending: false }).limit(30)]);
+  const cu = a.data || [], pr = b.data || [], sl = c.data || [];
+  const opts = pr.map(p => `<option value="${p.id}" data-p="${p.price}">${esc(p.name)} : ${fmt(p.price)} (stock ${p.stock})</option>`).join('');
+  lineHtml = () => `<div class="line"><select><option value="" data-p="0">Choisir un produit</option>${opts}</select><input type="number" min="1" value="1" aria-label="Quantité"><button type="button" data-a="rm" aria-label="Retirer la ligne">×</button></div>`;
+  const form = canWrite() ? `<section class="panel"><h3>Nouvelle vente</h3>
+  <div class="grid"><label>Client (facultatif)<select id="cu"><option value="">Client de passage</option>${cu.map(x => `<option value="${x.id}">${esc(x.name)}</option>`).join('')}</select></label>
+  <label>Moyen de paiement<select id="mt"><option>Espèces</option><option>Wave</option><option>Orange Money</option><option>Free Money</option><option>Virement</option></select></label></div>
+  <div id="ln">${lineHtml()}</div><button type="button" data-a="line">Ajouter un produit</button>
+  <div class="tot">Total : <b id="tt">0 FCFA</b></div>
+  <label>Montant encaissé (laissez moins que le total pour une vente à crédit)<input id="pd" type="number" min="0" value="0"></label>
+  <button class="pri" data-a="sell">Enregistrer la vente</button></section>` : '';
+  const rows = sl.map(s => { const r = s.total - s.paid; const ok = s.status === 'valid';
+    const msg = encodeURIComponent(`Reçu n°${s.number} – ${me.tenants.name}\nTotal : ${fmt(s.total)}\nPayé : ${fmt(s.paid)}\nReste : ${fmt(r)}`);
+    return `<tr class="${ok ? '' : 'off'}"><td>${s.number}</td><td>${dt(s.created_at)}</td><td>${esc(s.customers?.name || 'Client de passage')}</td><td>${fmt(s.total)}</td><td>${fmt(s.paid)}</td><td>${ok ? fmt(r) : 'Annulée'}</td>
+    <td class="act">${ok && r > 0 && canWrite() ? `<button data-a="pay" data-id="${s.id}" data-r="${r}">Encaisser</button>` : ''}${ok && canWrite() && ['owner', 'manager'].includes(me.role) ? `<button data-a="cancel" data-id="${s.id}">Annuler</button>` : ''}${ok ? `<a href="https://wa.me/?text=${msg}" target="_blank" rel="noopener">Reçu WhatsApp</a>` : ''}</td></tr>`; }).join('');
+  $('#main').innerHTML = `<div class="bar"><h2>Ventes</h2></div>${form}<div class="tw"><table><thead><tr><th>N°</th><th>Date</th><th>Client</th><th>Total</th><th>Payé</th><th>Reste</th><th></th></tr></thead><tbody>${rows || '<tr><td colspan="7" class="empty">Aucune vente enregistrée.</td></tr>'}</tbody></table></div>`;
+}
+
+// ---------- Abonnement ----------
+async function plan() {
+  const py = (await sb.from('saas_payments').select('*').order('created_at', { ascending: false }).limit(10)).data || [];
+  const cur = plans.find(p => p.id === sub?.plan_id);
+  const lim = n => n >= 999999 ? 'illimité' : num(n);
+  $('#main').innerHTML = `<div class="bar"><h2>Abonnement</h2></div>
+  <section class="panel"><h3>Formule actuelle : ${esc(cur?.name)}</h3><p>${sub?.ends_at ? `Valable jusqu’au ${dt(sub.ends_at)}${expired() ? ' (expiré)' : ''}` : 'Sans échéance'}</p></section>
+  <div class="plans">${plans.map(p => `<div class="panel${p.id === sub?.plan_id ? ' on' : ''}"><h3>${p.name}</h3><b>${fmt(p.price_month)}</b> / mois<br><small>${fmt(p.price_year)} / an</small>
+  <ul><li>${lim(p.max_users)} utilisateur(s)</li><li>${lim(p.max_products)} produits</li><li>${lim(p.max_sales_month)} ventes / mois</li></ul>
+  ${me.role === 'owner' && p.price_month > 0 ? `<button class="pri" data-a="plan" data-id="${p.id}">Choisir cette formule</button>` : ''}</div>`).join('')}</div>
+  <h3 style="margin-top:20px">Mes demandes de paiement</h3><div class="tw"><table><thead><tr><th>Date</th><th>Formule</th><th>Montant</th><th>Référence</th><th>Statut</th></tr></thead><tbody>${py.map(x => `<tr><td>${dt(x.created_at)}</td><td>${esc(x.plan_id)} (${x.period === 'yearly' ? 'annuel' : 'mensuel'})</td><td>${fmt(x.amount)}</td><td>${esc(x.reference)}</td><td>${{ pending: 'En attente de validation', validated: 'Validé', rejected: 'Rejeté' }[x.status]}</td></tr>`).join('') || '<tr><td colspan="5" class="empty">Aucune demande.</td></tr>'}</tbody></table></div>`;
+}
+function payForm(id) {
+  const p = plans.find(x => x.id === id), d = $('#dlg');
+  d.innerHTML = `<form id="pf"><h2>Formule ${p.name}</h2><p>Payez le montant sur le compte GSC communiqué par votre conseiller, puis saisissez la référence de la transaction. La formule est activée après vérification du paiement.</p>
+  <label>Période<select name="per"><option value="monthly">Mensuel : ${fmt(p.price_month)}</option><option value="yearly">Annuel : ${fmt(p.price_year)}</option></select></label>
+  <label>Moyen de paiement<select name="m"><option>Wave</option><option>Orange Money</option><option>Free Money</option><option>Virement bancaire</option></select></label>
+  <label>Référence de la transaction<input name="r" required></label>
+  <div class="row"><button type="button" id="cx">Annuler</button><button class="pri">Envoyer la demande</button></div></form>`;
+  d.showModal(); $('#cx').onclick = () => d.close();
+  $('#pf').onsubmit = async e => { e.preventDefault(); const f = new FormData(e.target);
+    const { error } = await sb.from('saas_payments').insert({ tenant_id: me.tenant_id, plan_id: id, period: f.get('per'), amount: f.get('per') === 'yearly' ? p.price_year : p.price_month, method: f.get('m'), reference: f.get('r') });
+    error ? toast(error.message, 1) : (d.close(), toast('Demande envoyée'), render()); };
+}
+
+// ---------- Administration GSC ----------
+async function admin() {
+  const [t, p] = await Promise.all([
+    sb.from('tenants').select('*,subscriptions(plan_id,period,ends_at)').order('created_at', { ascending: false }),
+    sb.from('saas_payments').select('*,tenants(name)').eq('status', 'pending').order('created_at')]);
+  const T = (t.data || []).map(x => ({ ...x, s: [].concat(x.subscriptions)[0] }));
+  const paying = T.filter(x => x.s && x.s.plan_id !== 'decouverte' && (!x.s.ends_at || new Date(x.s.ends_at) > new Date()));
+  const mrr = paying.reduce((a, x) => { const pl = plans.find(q => q.id === x.s.plan_id); return a + (x.s.period === 'yearly' ? pl.price_year / 12 : pl.price_month); }, 0);
+  $('#main').innerHTML = `<div class="bar"><h2>Administration GSC</h2></div>
+  <div class="kpis">${[['Entreprises inscrites', T.length], ['Clients payants', paying.length], ['MRR', fmt(Math.round(mrr))], ['Conversion', T.length ? Math.round(paying.length / T.length * 100) + ' %' : '0 %']].map(([l, v]) => `<div class="kpi"><span>${l}</span><b>${v}</b></div>`).join('')}</div>
+  <h3>Paiements à valider</h3><div class="tw"><table><thead><tr><th>Date</th><th>Entreprise</th><th>Formule</th><th>Montant</th><th>Moyen</th><th>Référence</th><th></th></tr></thead><tbody>${(p.data || []).map(x => `<tr><td>${dt(x.created_at)}</td><td>${esc(x.tenants?.name)}</td><td>${esc(x.plan_id)} (${x.period === 'yearly' ? 'annuel' : 'mensuel'})</td><td>${fmt(x.amount)}</td><td>${esc(x.method)}</td><td>${esc(x.reference)}</td><td class="act"><button class="pri" data-a="validate" data-id="${x.id}">Valider</button><button data-a="reject" data-id="${x.id}">Rejeter</button></td></tr>`).join('') || '<tr><td colspan="7" class="empty">Aucun paiement en attente.</td></tr>'}</tbody></table></div>
+  <h3>Entreprises clientes</h3><div class="tw"><table><thead><tr><th>Entreprise</th><th>Secteur</th><th>Téléphone</th><th>Formule</th><th>Échéance</th><th>Statut</th><th></th></tr></thead><tbody>${T.map(x => `<tr><td>${esc(x.name)}</td><td>${esc(x.sector)}</td><td>${esc(x.phone)}</td><td>${esc(x.s?.plan_id)}</td><td>${x.s?.ends_at ? dt(x.s.ends_at) : '—'}</td><td>${x.status === 'active' ? 'Actif' : 'Suspendu'}</td><td class="act"><button data-a="status" data-id="${x.id}" data-s="${x.status === 'active' ? 'suspended' : 'active'}">${x.status === 'active' ? 'Suspendre' : 'Réactiver'}</button></td></tr>`).join('')}</tbody></table></div>`;
+}
+
+// ---------- Actions (délégation d’événements) ----------
+async function act(e) {
+  const b = e.target.closest('[data-a]'); if (!b) return; const a = b.dataset.a, id = b.dataset.id, k = b.dataset.k;
+  try {
+    if (a === 'add') form(k);
+    else if (a === 'edit') form(k, cache[k].find(r => r.id === id));
+    else if (a === 'del') { if (!confirm('Supprimer cet enregistrement ? Il sera retiré de vos listes.')) return;
+      const { error } = await sb.from(k).update({ deleted_at: new Date().toISOString() }).eq('id', id); if (error) throw toast(error.message, 1); toast('Supprimé'); render(); }
+    else if (a === 'line') { $('#ln').insertAdjacentHTML('beforeend', lineHtml()); }
+    else if (a === 'rm') { if (document.querySelectorAll('#ln .line').length > 1) { b.closest('.line').remove(); calc(); } }
+    else if (a === 'sell') {
+      const items = [...document.querySelectorAll('#ln .line')].map(l => ({ product_id: l.querySelector('select').value, qty: +l.querySelector('input').value })).filter(i => i.product_id && i.qty > 0);
+      await call('create_sale', { p_customer: $('#cu').value || null, p_items: items, p_paid: +$('#pd').value || 0, p_method: $('#mt').value }); toast('Vente enregistrée'); render(); }
+    else if (a === 'pay') { const v = +prompt(`Montant encaissé (reste à payer : ${fmt(b.dataset.r)})`, b.dataset.r); if (!v) return; await call('add_sale_payment', { p_sale: id, p_amount: v }); toast('Paiement enregistré'); render(); }
+    else if (a === 'cancel') { const r = prompt('Motif de l’annulation'); if (!r) return; await call('cancel_sale', { p_sale: id, p_reason: r }); toast('Vente annulée, stock remis à jour'); render(); }
+    else if (a === 'plan') payForm(id);
+    else if (a === 'validate') { await call('admin_validate_payment', { p_payment: id }); toast('Paiement validé, formule activée'); render(); }
+    else if (a === 'reject') { const { error } = await sb.from('saas_payments').update({ status: 'rejected' }).eq('id', id); if (error) throw toast(error.message, 1); toast('Paiement rejeté'); render(); }
+    else if (a === 'status') { await call('admin_set_status', { p_tenant: id, p_status: b.dataset.s }); toast('Statut mis à jour'); render(); }
+  } catch {}
+}
+boot();
+</script>
+</body>
+</html>
